@@ -11,15 +11,15 @@ import org.springframework.web.bind.annotation.*;
 public class MailController {
 
     private MailService mailService;
-@Autowired
+
+    @Autowired
     public MailController(MailService mailService) {
         this.mailService = mailService;
     }
 
     @PostMapping(path = "/send/{mail}")
-    public ResponseEntity<String> sendMail(@PathVariable(name = "mail") String mail, @RequestBody MailStructure mailStructure)
-    {
-mailService.sendMail(mail,mailStructure);
-return  ResponseEntity.ok("Successfully sent the mail!!");
+    public ResponseEntity<String> sendMail(@PathVariable(name = "mail") String mail, @RequestBody MailStructure mailStructure) {
+        mailService.sendMail(mail, mailStructure);
+        return ResponseEntity.ok("Successfully sent the mail!!");
     }
 }
