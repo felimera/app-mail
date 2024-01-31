@@ -1,0 +1,40 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        background-color: #ECEFF1;
+        border-radius: 3px;
+    }
+
+    .panel {
+        padding: 0.5rem;
+    }
+
+    #subtitle {
+        text-align: left;
+        font-weight: 600;
+    }
+
+    #paragraph {
+        text-align: justify;
+        font-weight: 400;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <p id="subtitle" class="panel">Prueba del mensaje</p>
+        <p id="paragraph" class="panel" th:text="${nameOwner}"></p>
+    </div>
+</body>
+
+</html>
